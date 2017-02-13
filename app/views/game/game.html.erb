@@ -1,2 +1,17 @@
-<h1>Game#game</h1>
-<p>Find me in app/views/game/game.html.erb</p>
+<h1>Numbers and letters</h1>
+<p>Your letters:</p>
+<p class="grid">
+  <% @grid.each do |letter| %>
+    <%= letter %>
+  <% end %>
+</p>
+
+<form class="form-inline" method="get" action="/score">
+  <div class="form-group">
+    <label for="attempt">Your attempt</label>
+    <input type="text" class="form-control" id="attempt" name="attempt">
+  </div>
+  <input type="hidden" name="time_start" value="<%= @time_start %>">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <button type="submit" class="btn btn-default">Send</button>
+</form>

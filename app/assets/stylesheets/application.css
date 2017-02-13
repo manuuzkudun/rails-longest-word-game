@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.grid {
+  color: gray;
+  font-size: 20px;
+  font-weight: bold;
+}
